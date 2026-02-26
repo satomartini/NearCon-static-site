@@ -15,11 +15,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L2Z9CV8833"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-L2Z9CV8833');
+        gtag('config', 'G-L2Z9CV8833');
     </script>
 </head>
 
@@ -27,74 +27,57 @@
     <main>
         <!-- HERO SECTION -->
         <section class="hero" id="hero">
-            <h1 class="hero-title">「近コン」</h1>
-            <p class="hero-subtitle">CarPlay専用<br>最寄りコンビニをワンタップで。</p>
+            <h1 class="hero-title"><span class="highlight">CarPlay専用。</span><br>ワンタップで最寄りコンビニ。</h1>
+            <p class="text-secondary" style="margin-top: 0.5rem; font-weight: 600;">※ iPhone単体では利用できません</p>
 
-            <div class="hero-icon">
-                <img src="assets/icon.svg" alt="近コン アプリアイコン" width="128" height="128">
-                <p class="icon-tagline">Drive → Tap → Go</p>
-            </div>
-
-            <div class="cta-container">
-                <a href="#" class="btn-primary">App Storeで購入（¥300）</a>
-                <p class="cta-note">買い切り・広告なし・サブスクなし</p>
+            <div class="cta-container" style="margin-top: 3rem;">
+                <a href="#" class="btn-primary"
+                    onclick="gtag('event', 'hero_cta_click', { event_category: 'web_to_appstore_click' });">App
+                    Storeでダウンロード</a>
+                <p class="cta-note">価格：300円（買い切り・広告なし）</p>
             </div>
         </section>
 
-        <!-- PROBLEM SECTION -->
-        <section class="problem bg-gray" id="problem">
-            <h2 class="section-title">こんな瞬間、ありませんか？</h2>
-            <div class="card-grid pt-4">
+        <!-- BENEFITS SECTION -->
+        <section class="benefits bg-gray" id="benefits">
+            <div class="card-grid">
                 <div class="card">
-                    <p>運転中にコンビニを探すのが面倒。</p>
+                    <p>検索ゼロで<br>最寄りコンビニへ</p>
                 </div>
                 <div class="card">
-                    <p>トイレに行きたい。<br>でも操作はしたくない。</p>
+                    <p>運転中に<br>迷わない</p>
                 </div>
                 <div class="card">
-                    <p>地図アプリを開いて検索する余裕がない。</p>
+                    <p>押すだけで<br>ナビ開始</p>
                 </div>
             </div>
         </section>
 
-        <!-- SOLUTION SECTION -->
-        <section class="solution" id="solution">
-            <h2 class="section-title">やることは、ひとつだけ。</h2>
+        <!-- EXPERIENCE SECTION -->
+        <section class="experience" id="experience">
+            <div class="experience-steps">
+                <div class="step">
+                    <p>① ボタンを押す</p>
+                </div>
+                <div class="step">
+                    <p>② Apple Mapsが起動</p>
+                </div>
+                <div class="step">
+                    <p>③ 最寄りコンビニへナビ開始</p>
+                </div>
+            </div>
             <div class="mockup-container pt-4">
                 <img src="assets/mock_ui.svg" alt="CarPlay UI モックアップ" class="carplay-mockup">
             </div>
-            <p class="solution-text pt-4">ワンタップでApple Mapsが起動します。</p>
-            <p class="solution-note text-secondary">複雑な設定はありません。</p>
         </section>
 
         <!-- WHY SECTION -->
         <section class="why bg-gray" id="why">
-            <h2 class="section-title">なぜ、これだけなのか。</h2>
-            <div class="prose pt-4">
+            <div class="prose">
                 <p>近コンは、機能を足すのではなく削ることで生まれました。</p>
                 <p>必要なのは最寄りのコンビニへ行くこと。</p>
                 <p>それ以外は、いらない。</p>
             </div>
-        </section>
-
-        <!-- PRICE SECTION -->
-        <section class="price" id="price">
-            <h2 class="huge-text">たったの<br>300円。</h2>
-            <div class="price-details pt-4">
-                <p>一度きりの購入。</p>
-                <p>サブスクリプションはありません。</p>
-            </div>
-        </section>
-
-        <!-- WHO SECTION -->
-        <section class="who bg-gray" id="who">
-            <h2 class="section-title">こんな人に。</h2>
-            <ul class="target-list pt-4">
-                <li>・営業ドライバー</li>
-                <li>・子どもを乗せている親</li>
-                <li>・長距離ドライブ中</li>
-                <li>・とにかく早くコンビニに寄りたい人</li>
-            </ul>
         </section>
 
         <!-- FINAL CTA -->
@@ -102,7 +85,10 @@
             <h2 class="final-title">近コン</h2>
             <p class="final-subtitle">CarPlay専用。</p>
             <div class="cta-container pt-4">
-                <a href="#" class="btn-primary">App Storeで購入（¥300）</a>
+                <a href="#" class="btn-primary"
+                    onclick="gtag('event', 'bottom_cta_click', { event_category: 'web_to_appstore_click' });">App
+                    Storeでダウンロード</a>
+                <p class="cta-note">300円（買い切り）</p>
             </div>
         </section>
     </main>
