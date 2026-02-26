@@ -24,17 +24,24 @@
 </head>
 
 <body>
+    <header class="app-header">
+        <div class="header-content">
+            <img src="assets/icon.svg" alt="近コン" class="header-icon">
+            <span class="header-title">近コン</span>
+        </div>
+    </header>
+
     <main>
         <!-- HERO SECTION -->
         <section class="hero" id="hero">
-            <h1 class="hero-title"><span class="highlight">CarPlay専用。</span><br>ワンタップで最寄りコンビニ。</h1>
-            <p class="text-secondary" style="margin-top: 0.5rem; font-weight: 600;">※ iPhone単体では利用できません</p>
+            <h1 class="hero-title">運転中、コンビニを<br>探す時間をなくす。</h1>
+            <p class="hero-subtitle">CarPlay専用。ワンタップ最速ナビ。</p>
 
-            <div class="cta-container" style="margin-top: 3rem;">
-                <a href="#" class="btn-primary"
-                    onclick="gtag('event', 'hero_cta_click', { event_category: 'web_to_appstore_click' });">App
-                    Storeでダウンロード</a>
-                <p class="cta-note">価格：300円（買い切り・広告なし）</p>
+            <div class="cta-container" style="margin-top: 2rem;">
+                <a href="https://apps.apple.com/jp/app/id6759491217" class="btn-primary" target="_blank" rel="noopener noreferrer"
+                    onclick="gtag('event', 'click_appstore_hero');">¥300でダウンロード</a>
+                <p class="cta-note">買い切り・広告なし</p>
+                <p class="text-secondary" style="margin-top: 1rem; font-weight: 500; font-size: 0.85rem;">※ iPhone単体では利用できません</p>
             </div>
         </section>
 
@@ -42,13 +49,16 @@
         <section class="benefits bg-gray" id="benefits">
             <div class="card-grid">
                 <div class="card">
-                    <p>検索ゼロで<br>最寄りコンビニへ</p>
+                    <p>トイレに<br>行きたい</p>
                 </div>
                 <div class="card">
-                    <p>運転中に<br>迷わない</p>
+                    <p>飲み物が<br>欲しい</p>
                 </div>
                 <div class="card">
-                    <p>押すだけで<br>ナビ開始</p>
+                    <p>高速道路で<br>休憩したい</p>
+                </div>
+                <div class="card">
+                    <p>ついでに<br>寄りたい</p>
                 </div>
             </div>
         </section>
@@ -60,10 +70,10 @@
                     <p>① ボタンを押す</p>
                 </div>
                 <div class="step">
-                    <p>② Apple Mapsが起動</p>
+                    <p>② Apple Maps起動</p>
                 </div>
                 <div class="step">
-                    <p>③ 最寄りコンビニへナビ開始</p>
+                    <p>③ コンビニへナビ開始</p>
                 </div>
             </div>
             <div class="mockup-container pt-4">
@@ -71,24 +81,30 @@
             </div>
         </section>
 
+        <!-- MIDDLE CTA -->
+        <section class="middle-cta">
+             <div class="cta-container">
+                <a href="https://apps.apple.com/jp/app/id6759491217" class="btn-primary" target="_blank" rel="noopener noreferrer"
+                    onclick="gtag('event', 'click_appstore_mid');">¥300でダウンロード</a>
+            </div>
+        </section>
+
         <!-- WHY SECTION -->
         <section class="why bg-gray" id="why">
             <div class="prose">
-                <p>近コンは、機能を足すのではなく削ることで生まれました。</p>
+                <p>近コンは、機能を足すのではなく<br>削ることで生まれました。</p>
                 <p>必要なのは最寄りのコンビニへ行くこと。</p>
-                <p>それ以外は、いらない。</p>
+                <p>検索不要。選択不要。迷い不要。</p>
             </div>
         </section>
 
         <!-- FINAL CTA -->
         <section class="final-cta" id="final-cta">
-            <h2 class="final-title">近コン</h2>
-            <p class="final-subtitle">CarPlay専用。</p>
+            <h2 class="final-title">Drive → Tap → Go.</h2>
+            <p class="final-subtitle">CarPlay専用</p>
             <div class="cta-container pt-4">
-                <a href="#" class="btn-primary"
-                    onclick="gtag('event', 'bottom_cta_click', { event_category: 'web_to_appstore_click' });">App
-                    Storeでダウンロード</a>
-                <p class="cta-note">300円（買い切り）</p>
+                <a href="https://apps.apple.com/jp/app/id6759491217" class="btn-primary" target="_blank" rel="noopener noreferrer"
+                    onclick="gtag('event', 'click_appstore_footer');">¥300でダウンロード</a>
             </div>
         </section>
     </main>
