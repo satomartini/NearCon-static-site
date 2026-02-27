@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <!-- Background -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#141416" />
+      <stop offset="100%" stop-color="#08080A" />
+    </linearGradient>
+
+    <!-- Button Gradient -->
+    <linearGradient id="btnGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1D8EFC" />
+      <stop offset="100%" stop-color="#0066CC" />
+    </linearGradient>
+
+    <!-- Button Glow -->
+    <filter id="btnGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Screen Frame -->
+  <rect width="600" height="400" rx="30" fill="url(#bgGrad)" />
+  
+  <!-- Subtle screen glare -->
+  <radialGradient id="glare" cx="50%" cy="0%" r="100%">
+    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.05" />
+    <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+  </radialGradient>
+  <rect x="0" y="0" width="600" height="400" rx="30" fill="url(#glare)" />
+
+  <!-- The Massive Single Button -->
+  <g transform="translate(150, 120)">
+    <rect width="300" height="160" rx="40" fill="url(#btnGrad)" filter="url(#btnGlow)"/>
+    
+    <!-- Button Text -->
+    <text x="150" y="90" font-family="'Inter', 'Noto Sans JP', sans-serif" font-weight="800" font-size="28" fill="#FFFFFF" text-anchor="middle">最寄りコンビニ</text>
+    
+    <!-- Subtle Icon/Indicator -->
+    <path d="M 142 115 L 158 115 L 150 125 Z" fill="#FFFFFF" opacity="0.8" />
+  </g>
+</svg>
