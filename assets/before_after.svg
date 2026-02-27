@@ -19,7 +19,7 @@
     <g transform="translate(180, 100)" font-family="'Inter', sans-serif" font-weight="600" font-size="20" fill="#F5F5F7" text-anchor="middle">
       <text y="0">検索</text>
       <text y="30" fill="#555555">↓</text>
-      <text y="60">店選択</text>
+      <text y="60">選択</text>
       <text y="90" fill="#555555">↓</text>
       <text y="120">ナビ</text>
     </g>
@@ -32,11 +32,9 @@
     
     <text x="180" y="45" font-family="'Inter', sans-serif" font-weight="700" font-size="20" fill="#0A84FF" text-anchor="middle">近コン</text>
     
-    <g transform="translate(180, 100)" font-family="'Inter', sans-serif" font-weight="800" font-size="24" fill="#FFFFFF" text-anchor="middle">
-      <rect x="-80" y="-30" width="160" height="40" rx="20" fill="#0A84FF" />
-      <text y="0">1タップ</text>
-      <text y="40" fill="#0A84FF">↓</text>
-      <text y="80">ナビ開始</text>
+    <g transform="translate(180, 120)" font-family="'Inter', sans-serif" font-weight="800" font-size="28" fill="#FFFFFF" text-anchor="middle">
+      <rect x="-100" y="-35" width="200" height="50" rx="25" fill="#0A84FF" />
+      <text y="0">押すだけ</text>
     </g>
   </g>
 </svg>
