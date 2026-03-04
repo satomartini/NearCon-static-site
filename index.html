@@ -19,7 +19,25 @@
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        gtag('config', 'G-L2Z9CV8833');
+        // URLパラメータ ?debug=1 であれば debug_mode を有効化
+        const urlParams = new URLSearchParams(window.location.search);
+        const isDebug = urlParams.get('debug') === '1';
+
+        gtag('config', 'G-L2Z9CV8833', isDebug ? { 'debug_mode': true } : {});
+
+        // CTAクリック共通タグ送信ロジック
+        function trackAppStoreClick(locationName) {
+            const params = {
+                location: locationName,
+                link_url: 'https://apps.apple.com/jp/app/id6759491217',
+                price: '300',
+                product: 'nearcon'
+            };
+            if (isDebug) {
+                params.debug_mode = true;
+            }
+            gtag('event', 'click_appstore', params);
+        }
     </script>
 </head>
 
@@ -39,17 +57,16 @@
 
             <div class="cta-container" style="margin-top: 2rem;">
                 <a href="https://apps.apple.com/jp/app/id6759491217" class="btn-primary" target="_blank"
-                    rel="noopener noreferrer" onclick="gtag('event', 'click_appstore_hero');">App Storeで見る（¥300）</a>
-                <p class="cta-note">買い切り・広告なし</p>
+                    rel="noopener noreferrer" onclick="trackAppStoreClick('hero');">App Storeで見る（¥300 / 買い切り）</a>
                 <p class="text-secondary" style="margin-top: 1rem; font-weight: 500; font-size: 0.85rem;">※
-                    iPhone単体では利用できません</p>
+                    iPhone単体では利用できません（CarPlay必須）</p>
             </div>
 
             <div class="urgency-copy"
                 style="margin-top: 5rem; margin-bottom: 4rem; text-align: center; font-size: 1.75rem; font-weight: 800; line-height: 1.6; color: var(--color-text);">
-                <p>トイレ、急いでる。</p>
-                <p>喉、いま欲しい。</p>
-                <p>迷ってる時間はない。</p>
+                <p>トイレ、限界。</p>
+                <p>喉、渇いた。</p>
+                <p>眠気、きてる。</p>
             </div>
 
             <!-- ONE TAP UI PRIMARY -->
@@ -83,13 +100,7 @@
             </div>
         </section>
 
-        <!-- MIDDLE CTA -->
-        <section class="middle-cta" style="padding-top: 2.8rem; padding-bottom: 2.8rem;">
-            <div class="cta-container">
-                <a href="https://apps.apple.com/jp/app/id6759491217" class="btn-primary" target="_blank"
-                    rel="noopener noreferrer" onclick="gtag('event', 'click_appstore_mid');">App Storeで見る（¥300）</a>
-            </div>
-        </section>
+        <!-- MIDDLE CTA REMOVED AS REQUESTED TO AVOID SCATTERING TOO MANY CTAS -->
 
         <!-- WHY SECTION -->
         <section class="why bg-gray" id="why">
@@ -106,7 +117,7 @@
         <section class="final-cta" id="final-cta" style="padding-top: 4rem;">
             <div class="cta-container">
                 <a href="https://apps.apple.com/jp/app/id6759491217" class="btn-primary" target="_blank"
-                    rel="noopener noreferrer" onclick="gtag('event', 'click_appstore_footer');">App Storeで見る（¥300）</a>
+                    rel="noopener noreferrer" onclick="trackAppStoreClick('footer');">App Storeで見る（¥300 / 買い切り）</a>
             </div>
         </section>
     </main>
